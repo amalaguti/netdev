@@ -1,0 +1,7 @@
+# START roster block for {{ target }}
+{{ target }}:
+  host: {{ ip }}
+  sudo: True
+  user: ec2-user
+  priv: /etc/salt/pki/awsqs.pem
+# END roster block for {{ target }}

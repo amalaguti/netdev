@@ -1,0 +1,8 @@
+devices:
+  - hostname: devA.mylab.com
+    host: 192.168.251.212
+    user: ec2-user
+
+  - hostname: devB.mylab.com
+    host: 192.168.251.220
+    user: ec2-user
