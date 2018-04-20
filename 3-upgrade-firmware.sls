@@ -24,3 +24,4 @@ alias_cmd_{{ hostname }}:
         "{{ alias_cmd }}"
         'THIS SHOULD BE THE OUTPUT OF THE FIRMWARE EXECUTION, MAYBE WE DO NOT NEED TO CONVERT TO JSON'
         'FIND WAY TO PARSE THE OUTPUT'
+# The output must be modified
