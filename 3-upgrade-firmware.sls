@@ -26,3 +26,4 @@ alias_cmd_{{ hostname }}:
         'FIND WAY TO PARSE THE OUTPUT'
 # The output must be modified
 # -- adrian --
+# -- Doing training -- 
