@@ -10,7 +10,7 @@
 
 
 ##### JUST FOR TESTING - DELETE
-{% set version = '3.00.2D' %}
+{% set version = 'A.A.A.A' %}
 #####
 
 
