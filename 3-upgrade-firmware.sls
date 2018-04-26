@@ -10,6 +10,7 @@ show_output:
     - result: True
     - comment: {{ hostname }}
     ## TESTING GIT
+    ## DOING MORE TESTING
 
 ## Run the change_boot alias command that is already on the Arista switch
 {% set alias_cmd = 'salt-ssh --roster-file=/etc/salt/roster-devices -r -i ' + hostname + ' "change_boot" --out=json' %}
