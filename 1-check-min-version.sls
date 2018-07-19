@@ -14,6 +14,7 @@
 #####
 
 
+# TODAY IS THURSDAY
 
 ### JUST TO SHOW RECEIVED PILLAR DATA
 show_output:
