@@ -9,10 +9,10 @@
 {% set checksum = 'e95913d811c0fae6083eb709c356af73' %}
 #####
 
-# WE DID A CHANGE AND NEED TO ADD NEW FEATURE HERE 
 
 
-### JUST TO SHOW RECEIVED PILLAR DATA
+
+### SHOW PILLAR DATA
 show_output:
   test.configurable_test_state:
     - name: Show output
@@ -36,18 +36,17 @@ install_sshpass:
     - name: sshpass
 
 ### COPY FIRMWARE COMMAND
-{#
 copy_firmware_{{ hostname }}:
   cmd.run:
     - name: "{{ scp_cmd }}"
-#}
+
 
 ## On the switch, verify that the copied firmware file has the correct checksum
 {% set checksum_cmd = 'salt-ssh --roster-file=/etc/salt/roster-devices -r -i ' + hostname + ' "verify /md5 flash:EOS-4.16.8FX-MLAGISSU-TWO-STEP.swi" --out=json ' %}
-{# {% set checksum_raw = salt['cmd.run'](checksum_cmd) %} #}
-{# {% set checksum_json = checksum_raw | load_json  %} #}
+{% set checksum_raw = salt['cmd.run'](checksum_cmd) %}
+{% set checksum_json = checksum_raw | load_json  %}
 {% set device= 'hostname' %}
-{# {% set checksum = checksum_json[device].stdout.replace("Password: \nverify /md5 (flash:EOS-4.16.8FX-MLAGISSU-TWO-STEP.swi) = ", "") %} #}
+{% set checksum = checksum_json[device].stdout.replace("Password: \nverify /md5 (flash:EOS-4.16.8FX-MLAGISSU-TWO-STEP.swi) = ", "") %}
 
 show_checksum_{{ device }}:
   test.configurable_test_state:

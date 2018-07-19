@@ -17,7 +17,7 @@ show_output:
 ## Creating the roster file
 {% set M = my_devices['devices'] %}
 {% for mm in M %}
-do_something_loopyonthemaster_{{ loop.index }}:
+show_info_{{ loop.index }}:
   test.configurable_test_state:
     - name: Show devices hostname
     - changes: False
