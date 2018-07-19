@@ -14,7 +14,7 @@
 #####
 
 
-# TODAY IS THURSDAY # YEAH!! Hell yeah!
+# TODAY IS THURSDAY # YEAH!! Hell yeah!!
 
 ### JUST TO SHOW RECEIVED PILLAR DATA
 show_output:
